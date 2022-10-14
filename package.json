@@ -1,0 +1,19 @@
+{
+  "name": "movie_api",
+  "version": "1.0.0",
+  "description": "default package.json file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seeta73/movie_api.git"
+  },
+  "author": "Seeta Genova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seeta73/movie_api/issues"
+  },
+  "homepage": "https://github.com/seeta73/movie_api#readme"
+}
