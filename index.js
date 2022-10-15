@@ -56,7 +56,10 @@ app.get('/movies', (req, res)=> {
   res.json(topMovies);
 });
 
-
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
 
 app.listen(8080, () => {
   console.log('Welcome to the best myFlix movie app!');
