@@ -1,6 +1,10 @@
 const express = require('express'),
-morgan = require('morgan');
+morgan = require('morgan'),
+fs = require ('fs'),
+path = require ('path');
+
 const app = express();
+const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), {flags: 'a'})
 
 let topMovies = [
   {
@@ -34,6 +38,10 @@ let topMovies = [
     10: 'Sonic the Hedgehog 2'
   }
 ];
+
+app.use(morgan('combined', {stream: accessLogStream}));
+
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
   res.send('Welcome to myFlix movie app!');
