@@ -30,7 +30,7 @@ let topMovies = [
     9: 'Thor: Love and Thunder',
   },
   {
-    10: 'Sonic the Hedgehod 2'
+    10: 'Sonic the Hedgehog 2'
   }
 ];
 
