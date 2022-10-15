@@ -34,13 +34,20 @@ let topMovies = [
   }
 ];
 
+app.get('/', (req, res) => {
+  res.send('Welcome to myFlix movie app!');
+});
+
+app.get('/documentation',(req,res) => {
+  res.sendFile('public/documentation.html', {
+    root:_dirname });
+});
+
 app.get('/movies', (req, res)=> {
   res.json(topMovies);
 });
 
-app.get('/', (req, res) => {
-  res.send('Welcome to myFlix movie app!');
-})
+
 
 app.listen(8080, () => {
   console.log('Welcome to the best myFlix movie app!');
