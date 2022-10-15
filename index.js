@@ -41,7 +41,7 @@ let topMovies = [
 
 app.use(morgan('combined', {stream: accessLogStream}));
 
-app.use(express.static('public'));
+app.use('/', express.static('public'));
 
 app.get('/', (req, res) => {
   res.send('Welcome to myFlix movie app!');
