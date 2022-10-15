@@ -3,34 +3,34 @@ const app = express();
 
 let topMovies = [
   {
-    title: 'Titanic',
+    1: 'Titanic',
   },
   {
-    title: 'The Lion King'
+    2: 'The Lion King'
   },
   {
-    title: 'Inception',
+    3: 'Inception',
   },
   {
-    title: 'The Godfather'
+    4: 'The Godfather'
   },
   {
-    title: 'The Lord of the Rings: The Return of the King',
+    5: 'The Lord of the Rings: The Return of the King',
   },
   {
-    title: 'The Batman'
+    6: 'The Batman'
   },
   {
-    title: 'Source Code',
+    7: 'Source Code',
   },
   {
-    title: 'Fantastc Beasts: The Secrets of Dumbledore'
+    8: 'Fantastc Beasts: The Secrets of Dumbledore'
   },
   {
-    title: 'Thor: Love and Thunder',
+    9: 'Thor: Love and Thunder',
   },
   {
-    title: 'Sonic the Hedgehod 2'
+    10: 'Sonic the Hedgehod 2'
   }
 ];
 
