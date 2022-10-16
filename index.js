@@ -29,7 +29,7 @@ let topMovies = [
     7: 'Source Code',
   },
   {
-    8: 'Fantastc Beasts: The Secrets of Dumbledore'
+    8: 'Fantastic Beasts: The Secrets of Dumbledore'
   },
   {
     9: 'Thor: Love and Thunder',
