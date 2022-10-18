@@ -312,14 +312,12 @@ app.get('/movies/directors/:directorName', (req, res) => {
   }
 });
 
-
-
 //Error Handling middleware function
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).send('Something broke!');
+  res.status(500).send('There\'s an error!');
 });
 
 app.listen(8080, () => {
-  console.log('Welcome to the best myFlix movie app!');
+  console.log('Find a movie on SMDB today!');
 });
