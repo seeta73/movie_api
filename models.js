@@ -1,5 +1,7 @@
+//This requires the Mongoose package
 const mongoose = require('mongoose');
 
+//Schema defined for documents in the "Movies" collection
 let movieSchema = mongoose.Schema({
   Title: {type: String, required: true},
   Description: {type: String, required: true},
@@ -16,6 +18,7 @@ let movieSchema = mongoose.Schema({
   Featured: Boolean
 });
 
+//Schema defined for documents in the "Users" collection
 let userSchema = mongoose.Schema({
   Username: {type: String, required: true},
   Password: {type: String, required: true},
@@ -24,8 +27,10 @@ let userSchema = mongoose.Schema({
   FavoriteMovies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Movie' }]
 });
 
+//Creates collections called db.movies and db.users
 let Movie = mongoose.model('Movie', movieSchema);
 let User = mongoose.model('User', userSchema);
 
+//Exports the modules to import them into index.js
 module.exports.Movie = Movie;
 module.exports.User = User;

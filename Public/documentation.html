@@ -72,32 +72,40 @@
               <td>JSON object holding all data about movies</td>
           </tr>
           <tr>
-              <td>Return data (description, genre, director, image URL, whether it’s featured or not) about a single movie by title to the user</td>
-              <td>/movies/[title]</td>
+              <td>Return a list of ALL users</td>
+              <td>/users</td>
               <td>GET</td>
-              <td>:title</td>
+              <td>none</td>
+              <td>none</td>
+              <td>JSON object holding all data about movies</td>
+          </tr>
+          <tr>
+              <td>Return data (description, genre, director, image URL, whether it’s featured or not) about a single movie by title to the user</td>
+              <td>/movies/:[Title]</td>
+              <td>GET</td>
+              <td>:Title</td>
               <td>none</td>
               <td>JSON object holding data about a single movie</td>
           </tr>
           <tr>
               <td>Return data about a genre (description) by name/title</td>
-              <td>/movies/genre/[Name]</td>
+              <td>/movies/genres/[Name]</td>
               <td>GET</td>
-              <td>:genreName</td>
+              <td>:Name</td>
               <td>none</td>
               <td>JSON object with the genre name</td>
           </tr>
           <tr>
               <td>Return data about a director (bio, birth year) by name</td>
-              <td>/movies/directors/[name]</td>
+              <td>/movies/directors/[Name]</td>
               <td>GET</td>
-              <td>:directorName</td>
+              <td>:Name</td>
               <td>none</td>
               <td>JSON object with director name</td>
           </tr>
           <tr>
               <td>Allow new users to register</td>
-              <td>/users</td>
+              <td>/users/[Username]</td>
               <td>POST</td>
               <td>none</td>
               <td>JSON object holding data the user wants to add</td>
@@ -105,33 +113,33 @@
           </tr>
           <tr>
               <td>Allow users to update their user info</td>
-              <td>/users/:id</td>
+              <td>/users/[Username]</td>
               <td>PUT</td>
-              <td>:id</td>
+              <td>:Username</td>
               <td>JSON object holding data the user wants to update</td>
               <td>A text message indicating the user info was updated successfully</td>
           </tr>
           <tr>
               <td>Allow users to add a movie to their list of favorites</td>
-              <td>/users/:id/:movieTitle</td>
+              <td>/users/[Username]/movies/[MovieID]</td>
               <td>POST</td>
-              <td>:id, :movieTitle</td>
+              <td>:Username, :MovieID</td>
               <td>JSON obect holding the data the user wants to add</td>
               <td>A text message indicating the movie was added</td>
           </tr>
           <tr>
               <td>Allow users to remove a movie from their list of favorites</td>
-              <td>/users/:id/:movieTitle</td>
+              <td>/users/[Username]/movies/[MovieID]</td>
               <td>DELETE</td>
-              <td>:id, :movieTitle</td>
+              <td>:Username, :MovieID</td>
               <td>none</td>
               <td>A text message indicating the movie was removed</td>
           </tr>
           <tr>
               <td>Allow existing users to deregister</td>
-              <td>/users/:id</td>
+              <td>/users/[Username]</td>
               <td>DELETE</td>
-              <td>:id</td>
+              <td>:Username</td>
               <td>none</td>
               <td>A text message indicating the user was deregistered successfully</td>
           </tr>
