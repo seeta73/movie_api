@@ -174,7 +174,7 @@ app.put('/users/:Username', (req, res) => {
 });
 
 // CREATE, POST method - Allow users to add a movie to a user's list of favorites
-// tested in Postman?
+// tested in Postman successfully
 app.post('/users/:Username/movies/:MovieID', (req, res) => {
   Users.findOneAndUpdate({ Username: req.params.Username }, {
      $push: { FavoriteMovies: req.params.MovieID }
@@ -191,7 +191,7 @@ app.post('/users/:Username/movies/:MovieID', (req, res) => {
 });
 
 // DELETE, DELETE method - Allow users to remove a movie from a user's list of favorites
-// tested in Postman?
+// tested in Postman successfully
 app.delete('/users/:Username/movies/:MovieID', (req, res) => {
   Users.findOneAndUpdate({ Username: req.params.Username }, {
      $pull: { FavoriteMovies: req.params.MovieID }
@@ -209,7 +209,7 @@ app.delete('/users/:Username/movies/:MovieID', (req, res) => {
 
 
 //DELETE, DELETE method - Allow existing users to deregister
-//tested in Postman?
+//tested in Postman successfully
 app.delete('/users/:Username', (req, res) => {
   Users.findOneAndRemove ({ Username: req.params.Username })
   .then((user) => {
