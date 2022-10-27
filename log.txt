@@ -144,3 +144,4 @@
 ::1 - - [25/Oct/2022:17:04:20 +0000] "DELETE /users/brianna/movies/6352b57499a7243f42a13ab3 HTTP/1.1" 200 183 "-" "PostmanRuntime/7.29.2"
 ::1 - - [25/Oct/2022:17:05:21 +0000] "DELETE /users/testuser HTTP/1.1" 400 22 "-" "PostmanRuntime/7.29.2"
 ::1 - - [25/Oct/2022:17:05:29 +0000] "DELETE /users/brianna HTTP/1.1" 200 19 "-" "PostmanRuntime/7.29.2"
+::1 - - [27/Oct/2022:22:38:58 +0000] "GET /users HTTP/1.1" 401 - "-" "PostmanRuntime/7.29.2"
