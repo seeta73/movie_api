@@ -48,7 +48,7 @@ app.get('/documentation',(req,res) => {
 
 // CREATE, POST method - Allow new users to register
 // tested in Postman?
-app.post('/users', passport.authenticate('jwt', { session: false }), (req, res) => {
+app.post('/users', (req, res) => {
   Users.findOne({ Username: req.body.Username })
   .then((user) => {
     if (user) {
