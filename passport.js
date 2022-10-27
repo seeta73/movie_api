@@ -1,5 +1,5 @@
 const passport = require('passport'),
-  LocalStrategy = require('passort-local').Strategy,
+  LocalStrategy = require('passport-local').Strategy,
   Models = require('./models.js'),
   passportJWT = require('passport-jwt');
 
@@ -9,18 +9,17 @@ ExtractJWT = passportJWT.ExtractJwt;
 
 passport.use(new LocalStrategy({
   usernameField: 'Username',
-  passwordField: "Password"
+  passwordField: 'Password'
 }, (username, password, callback) => {
   console.log(username + '  ' + password);
-  User.sfindONe({Username: username }, (error, user)
-=> {
+  Users.findOne({ Username: username }, (error, user) => {
   if (error) {
     console.log(error);
     return callback(error);
   }
   if (!user) {
     console.log('incorrect username');
-    return callback(nul, false, {message: 'Incorrect username or password.'});
+    return callback(null, false, {message: 'Incorrect username or password.'});
   }
   console.log('finished');
   return callback(null, user);

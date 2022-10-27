@@ -30,7 +30,7 @@ app.use('/documentation', express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-let auth = require('.auth')(app);
+let auth = require('./auth')(app);
 const passport = require('passport');
 require('./passport');
 
@@ -77,7 +77,7 @@ app.post('/users', (req, res) => {
 
 //READ, GET method - Return a list of all movies
 //tested in Postman successfully
-app.get('/movies', (req, res) => {
+app.get('/movies', passport.authenticate('jwt', { session: false }), (req, res) => {
   Movies.find()
   .then((movies) => {
     res.status(201).json(movies);
