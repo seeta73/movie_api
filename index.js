@@ -77,7 +77,7 @@ app.post('/users', (req, res) => {
 
 //READ, GET method - Return a list of all movies
 //tested in Postman?
-app.get('/movies', passport.authenticate('jwt', { session: false }), (req, res) => {
+app.get('/movies', (req, res) => {
   Movies.find()
   .then((movies) => {
     res.status(201).json(movies);
